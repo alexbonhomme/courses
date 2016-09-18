@@ -38,17 +38,19 @@
         h1 {
             font-size: 40px;
             color: #4897D8;
+            margin: 15px auto;
         }
         h1 small{
             font-size: 45%;
             /*color: #FFDB5C;*/
         }
         h2 {
-            font-size: 22px;
+            font-size: 20px;
             color: #F16E59;
+            margin-top: 15px;
         }
         h2:first-child {
-            margin-top: 10px;
+            margin-top: 0;
         }
         pre {
             border: 0;
@@ -56,10 +58,10 @@
             word-break: initial;
             word-wrap: initial;
             border-radius: 0;
-            margin: 15px auto;
+            margin: 10px auto;
         }
         pre code {
-            font-size: 12px;
+            font-size: 11px;
         }
         .hljs {
             padding: 0 0.5em;
@@ -79,17 +81,17 @@
 
                 <!-- colonne 1 -->
                 <div class="col-sm-4">
-                    <h2>Quelques fonctions utiles</h2>
+<!--                     <h2>Quelques fonctions utiles</h2>
                     <pre><code class="js">
 // Affiche un popup
 alert("Je suis un popup");
 
 // Affiche un message dans la console
 console.log("Ce message s’affiche dans la console du navigateur");
-                    </code></pre>
+                    </code></pre> -->
 
                     <h2>Les variables</h2>
-                    Les variables servent à stocker une information. <br>Il faut créer une varaible et lui donner un nom avant de pouvoir l'utiliser. C'est comme une boite avec une étiquette collée dessus.
+                    Une variable sert à stocker une information. Il faut créer une variable et lui donner un nom avant de pouvoir l'utiliser. C'est comme une boite avec une étiquette collée dessus.
                     <pre><code class="js">
 // Le mot clé "var" permet de créer une nouvelle variable
 var nomDeMaVariable;
@@ -102,12 +104,7 @@ var nouvelleVariable = "Je suis un texte";
 console.log(nouvelleVariable);
                     </code></pre>
 
-                    Pour modifier la valeur d'une variable on utilise le signe "=".
-                </div>
-
-
-                <!-- colonne 2 -->
-                <div class="col-sm-4">
+                    Pour modifier la valeur d'une variable on utilise le signe <b>=</b>.
 
                     <pre><code class="js">
 // ajoute 1 à la variable
@@ -117,8 +114,8 @@ variableNombre = variableNombre + 1;
 variableNombre = "nouveau contenu"
                     </code></pre>
 
-                    <h2>Les conditions</h2>
-                    Les conditions définissent l'exécution d'une partie de code. Une condition s'écrit sous la forme d'une expression qui peut être <em>vraie</em> ou <em>fausse</em>.
+                   <h2>Les conditions</h2>
+                    Une condition définit l'exécution d'une partie de code. Une condition s'écrit sous la forme d'une expression qui peut être <em>vraie</em> ou <em>fausse</em>.
 
                     <pre><code class="js">
 var nombre = 20;
@@ -127,32 +124,63 @@ if (nombre > 10) {
     // instructions a exécuter si la condition est vraie
 }
                     </code></pre>
+                </div>
+
+
+                <!-- colonne 2 -->
+                <div class="col-sm-4">
 
                     Il est possible de définir une seconde portion de code à exécuter si la condition n'est pas vraie grâce au mot clé <b>else</b>.
                     <pre><code class="js">
-if (nombre > 10) {
+if ((nombre > 10) && (nombre < 100)) {
     // instructions a exécuter si la condition est vraie
 } else {
     // instructions a exécuter si la condition n’est pas vraie
 }
                     </code></pre>
+
+                    On peut décomposer une condition complexe en plusieurs conditions simples grâce aux opérateurs logique <b>&&</b> (<em>et</em>), <b>||</b> (<em>ou</em>) et <b>!</b> (<em>non</em>).
+
+
+                    <h2>Les boucles</h2>
+                    Une boucle permet de répéter un ensemble d'instructions tant qu'une condition est <em>vraie</em>. Une boucle est composée de 3 éléments : une variable compteur (<b>var i = 0</b>), une condition d'arrêt (<b>i < 10</b>) et un pas d'incrémentation (<b>i = i + 1</b>).
+
+                    <pre><code class="js">
+for (var i = 0; i < 10; i = i + 1) {
+    // affiche 10 fois la valeur de i (ie. 0, 1, etc.)
+    console.log(i);
+}
+                    </code></pre>
+
+Il existe une seconde syntaxe pour écrire une boucle :
+
+                    <pre><code class="js">
+var i = 0;
+while (i < 10) {
+    // affiche 10 fois la valeur de i (ie. 0, 1, etc.)
+    console.log(i);
+
+    // incrémente la valeur de i
+    i = i + 1;
+}
+                    </code></pre>
+
                 </div>
 
 
                 <!-- colonne 3 -->
                 <div class="col-sm-4">
 
-                    <h2>Les boucles</h2>
-                    <pre><code class="js">
-for (var i = 0; i <= 10; i = i + 1) {
-    // instructions
-}
-                    </code></pre>
+
 
                     <h2>Les tableaux</h2>
+                    Un tableau est une structure de données qui permet de stocker plusieurs informations dans une variable. On obtient la taille d'un tableau grâce à <b>.length</b>.
+
                     <pre><code class="js">
+// on déclare un tableau avec les "[ ]"
 var nomDuTableau = [1, 3, 0, 5];
 
+// affiche chaque élément du tableau sur une nouvelle ligne
 for (var i = 0; i < nomDuTableau.length; i = i + 1) {
     console.log(nomDuTableau.length[i]);
 }
@@ -160,11 +188,17 @@ for (var i = 0; i < nomDuTableau.length; i = i + 1) {
 
 
                     <h2>Les fonctions</h2>
+                    Une fonction permet de rassembler un ensemble d'instructions afin de pouvoir les exécuter plusieurs fois.<br>
+                    Elle peut avoir des <em>paramètres</em>, qui seront alors utilisés de la même manière que des variables au sein de la fonction, afin d'obtenir du code générique.<br>
+                    Une fonction renvoie une valeur qui peut-être stipulée grâce au mot clé <b>return</b>. Celle-ci peut-être enregistrée dans une variable afin d'être utilisé ultérieurement. Par défaut la valeur renvoyée est <b>undefined</b>.
+
                     <pre><code class="js">
+// on déclare en premier lieu la fonction avec ses paramètres (s'il y en a)
 function nomDeLaFonction(param1, param2) {
     return param1 + param2;
 }
 
+// on peut ensuite utiliser la fonction en lui donnant des valeurs qui seront copiées dans les paramètres
 var resultat = nomDeLaFonction(40, 2);
                     </code></pre>
                 </div>

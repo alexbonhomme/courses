@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todolist</title>
+</head>
+<body>
+    <!-- Exemple de code HTML -->
+    <div class="container"></div>
+    <span id="add-line">Ajouter une ligne</span>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <script type="text/javascript">
+        $("#add-line").on("click", function () {
+            // ajoute une balise p à la fin de l'élément "container"
+            $(".container").append("<p>Nouveau texte !</p>");
+
+            $("p").off("dblclick").on("dblclick", function () {
+                // supprime l'élément cliqué
+                $(this).remove();
+            });
+        });
+
+
+    </script>
+</body>
+</html>

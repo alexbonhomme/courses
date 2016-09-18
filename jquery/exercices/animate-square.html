@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Square</title>
+
+    <style type="text/css">
+        .square {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="square"></div>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <script type="text/javascript">
+    $(function () {
+        $(".square")
+            .animate({
+                "left": "+=500",
+                "opacity": "0.3"
+            }, 5000)
+            .animate({
+                "top": "+=500",
+                "height": "+=100",
+                "width": "+=100"
+            }, 5000)
+            .animate({
+                "left": "-=500",
+                "opacity": "1"
+            }, 5000)
+            .animate({
+                "top": "-=500",
+                "height": "-=100",
+                "width": "-=100"
+            }, 5000);
+    })
+
+
+    </script>
+</body>
+</html>

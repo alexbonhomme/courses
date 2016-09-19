@@ -2,72 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>JavaScript Memo</title>
+    <title>JavaScript Overview</title>
 
     <link rel="stylesheet" href="css/bootstrap-no-print.min.css">
     <link rel="stylesheet" href="css/atom-one-light.min.css">
-
-    <style type="text/css">
-        /* A4 format */
-        page {
-            background: white;
-            display: block;
-            margin: 0 auto;
-            box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-            padding: 0.5cm;
-        }
-        page[size="A4"] {
-            width: 21cm;
-            height: 29.7cm;
-        }
-        page[size="A4"][layout="landscape"] {
-            width: 29.7cm;
-            height: 21cm;
-        }
-        @media print {
-            body, page {
-                margin: 0;
-                box-shadow: 0;
-            }
-        }
-
-        /* Others styles */
-        body {
-            background: rgb(204,204,204);
-            font-size: 12px;
-        }
-        h1 {
-            font-size: 40px;
-            color: #4897D8;
-            margin: 15px auto;
-        }
-        h1 small{
-            font-size: 45%;
-            /*color: #FFDB5C;*/
-        }
-        h2 {
-            font-size: 20px;
-            color: #F16E59;
-            margin-top: 15px;
-        }
-        h2:first-child {
-            margin-top: 0;
-        }
-        pre {
-            border: 0;
-            padding: 0;
-            word-break: initial;
-            word-wrap: initial;
-            border-radius: 0;
-            margin: 10px auto;
-        }
-        pre code {
-            font-size: 11px;
-        }
-        .hljs {
-            padding: 0 0.5em;
-        }
-    </style>
+    <link rel="stylesheet" href="css/overview.css">
 </head>
 <body>
     <page size="A4" layout="landscape">
@@ -75,7 +14,7 @@
 
         <div class="container-fluid">
             <header>
-                <h1>JavaScript Memo <small>Alexandre Bonhomme &lt;hello@alexandrebonhomme.com&gt;</small></h1>
+                <h1>JavaScript Overview <small>Alexandre Bonhomme &lt;hello@alexandrebonhomme.com&gt;</small></h1>
             </header>
 
             <div class="row">
@@ -171,9 +110,6 @@ while (i < 10) {
 
                 <!-- colonne 3 -->
                 <div class="col-sm-4">
-
-
-
                     <h2>Les tableaux</h2>
                     Un tableau est une structure de données qui permet de stocker plusieurs informations dans une variable. On obtient la taille d'un tableau grâce à <b>.length</b>.
 
@@ -186,7 +122,6 @@ for (var i = 0; i < nomDuTableau.length; i = i + 1) {
     console.log(nomDuTableau[i]);
 }
                     </code></pre>
-
 
                     <h2>Les fonctions</h2>
                     Une fonction permet de rassembler un ensemble d'instructions afin de pouvoir les exécuter plusieurs fois.<br>

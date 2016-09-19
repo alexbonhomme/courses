@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Overview</title>
+
+    <link rel="stylesheet" href="css/bootstrap-no-print.min.css">
+    <link rel="stylesheet" href="css/atom-one-light.min.css">
+    <link rel="stylesheet" href="css/overview.css">
+</head>
+<body>
+    <page size="A4" layout="landscape">
+        <div class="container-fluid">
+            <header>
+                <h1>jQuery Overview <small>Alexandre Bonhomme &lt;hello@alexandrebonhomme.com&gt;</small></h1>
+            </header>
+
+            <div class="row">
+
+                <!-- colonne 1 -->
+                <div class="col-sm-4">
+                    <h2><em>Règle d'or</em></h2>
+                    Afin d'attendre le chargement total du <em>DOM</em> il faut toujours écrire sont code jQuery/JavaScript à l'intérieur de la fonction suivante :
+
+                   <pre><code class="js">
+$(function () {
+    // je dois absolument écrire mon code ici !
+});
+                    </code></pre>
+
+                    <h2>Les sélecteurs</h2>
+                    Un sélecteur permet de récupérer un ou plusieurs éléments du <em>DOM</em>. Pour séléctionner un élément on utilise la fonction <b>$()</b>. Celle-ci prend en paramètre un sélècteur <em>CSS</em> valide (eg. <b>#foo</b>, <b>.bar</b>, etc.).
+
+                   <pre><code class="js">
+// sélectionne tous les éléments avec l'id "foo"
+var fooElements = $("#foo");
+                    </code></pre>
+                </div>
+
+
+                <!-- colonne 2 -->
+                <div class="col-sm-4">
+
+
+                </div>
+
+
+                <!-- colonne 3 -->
+                <div class="col-sm-4">
+
+                </div>
+            </div>
+        </div>
+    </page>
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

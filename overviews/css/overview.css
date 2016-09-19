@@ -1,0 +1,59 @@
+/* A4 format */
+page {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+    padding: 0.5cm;
+}
+page[size="A4"] {
+    width: 21cm;
+    height: 29.7cm;
+}
+page[size="A4"][layout="landscape"] {
+    width: 29.7cm;
+    height: 21cm;
+}
+@media print {
+    body, page {
+        margin: 0;
+        box-shadow: 0;
+    }
+}
+
+/* Others styles */
+body {
+    background: rgb(204,204,204);
+    font-size: 12px;
+}
+h1 {
+    font-size: 40px;
+    color: #4897D8;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+h1 small{
+    font-size: 45%;
+}
+h2 {
+    font-size: 20px;
+    color: #F16E59;
+    margin-top: 15px;
+}
+.col-sm-4 h2:first-child {
+    margin-top: 0;
+}
+pre {
+    border: 0;
+    padding: 0;
+    word-break: initial;
+    word-wrap: initial;
+    border-radius: 0;
+    margin: 10px auto;
+}
+pre code {
+    font-size: 11px;
+}
+.hljs {
+    padding: 0 0.5em;
+}
